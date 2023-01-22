@@ -17,3 +17,5 @@ function solution(quiz) {
   })
   return total;
 }
+
+// 다른 풀이
