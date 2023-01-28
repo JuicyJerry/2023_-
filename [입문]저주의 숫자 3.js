@@ -15,3 +15,12 @@ function solution(n) {
   }
   return arr[n - 1][1];
 }
+
+// 다른 풀이
+function solution(n) {
+  let arr = [];
+  let num = 0;
+  while (arr.length !== n && ++num) if (num%3!==0 && !(''+num).includes('3')) arr.push(num);
+  console.log(arr);
+  return arr.pop();
+}
