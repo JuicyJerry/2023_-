@@ -1,8 +1,9 @@
 function solution(chicken) {
-  let freeChicken = Math.floor(chicken / 10);
-  let left = Math.floor(freeChicken / 10);
-  let freeChickenCoupon = Math.floor(left / 10);
-  let freeLeft = Math.floor(freeChickenCoupon);
-  let answer = freeChickenCoupon >= 1 ? freeChicken + left + freeChickenCoupon + freeLeft : freeChicken + left;
-  return answer;
+  let coupon = chicken;
+  let service = 0;
+  while (coupon >= 10) {
+      service += Math.floor(coupon / 10); 
+      coupon = Math.floor(coupon / 10) + coupon % 10; 
+  }
+  return service;
 }
